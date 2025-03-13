@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+body {
+  font-family: Inter;
+}
+
+.text-fade1 {
+  @apply text-gray-600 text-[15px] font-[500];
+}
+
+.divider {
+  @apply my-5 w-full h-[1px] bg-gray-300;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  height: 8vh;
+  width: calc(100% - 250px);
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.navbar.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.main-section {
+  position: absolute;
+  top: 8vh;
+  padding: 1rem 0;
+  left: 250px;
+  background: #f1f5f9;
+  width: calc(100% - 250px);
+  height: 92vh;
+  overflow: auto;
+  transition: all 0.3s ease;
+}
+
+.main-section.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.menu-item {
+  @apply inline-block w-full text-white;
+}
+
+.menu-item.sub {
+  @apply text-neutral-800;
+}
+
+.menu-item.active {
+  @apply bg-blue-600 text-white;
+}
+
+.sub-menu {
+  @apply text-white transition-all;
+}
+
+.sub-menu.active {
+  @apply bg-blue-600;
+}
+
+.card {
+  @apply w-full p-4 rounded-md bg-white flex items-center gap-4;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: #45556c;
+  color: #fff;
+  box-shadow: -6px -6px #0f172b;
+  transform: translate(6px, 6px);
+}
